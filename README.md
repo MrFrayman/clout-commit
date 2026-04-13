@@ -1,6 +1,6 @@
 # clout-commit 🟢
 
-> *"Making GitHub heatmaps green since [date you started lying]*"
+> *"Making GitHub heatmaps green since umm... 2026*"
 
 ## What is this?
 
