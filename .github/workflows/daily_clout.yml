@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.CLOUT_TOKEN }}
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
       
@@ -24,6 +24,9 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+      
+      - name: Make run.sh executable
+        run: chmod +x run.sh
       
       - name: Run the commitment ceremony
         run: bash run.sh

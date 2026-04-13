@@ -43,4 +43,4 @@ selected_message=${messages[$RANDOM % ${#messages[@]}]}
 # Git operations
 git add data.txt
 git commit -m "$selected_message"
-git push origin master
+git push origin main
