@@ -17,8 +17,20 @@ Think of it as **proof of life** for your GitHub account.
 
 ## Installation
 
+### Option 1: GitHub Actions (Recommended - Fully Automated)
+
 ```bash
 # Clone the repo (use SSH for maximum authenticity)
+git clone git@github.com:mrfrayman/clout-commit.git
+cd clout-commit
+```
+
+That's it! The GitHub Actions workflow (`.github/workflows/daily_clout.yml`) runs automatically every day at 10:30 AM Dubai Time. Your commits happen without lifting a finger.
+
+### Option 2: Local Cronjob (If you prefer manual control)
+
+```bash
+# Clone the repo
 git clone git@github.com:mrfrayman/clout-commit.git
 cd clout-commit
 
@@ -50,7 +62,7 @@ A: Is it ethical to waste recruiters' time? Is it ethical to judge developers on
 A: Only if they look at what you're actually committing (1 character changes). Then you're cooked.
 
 **Q: Can I customize the commit messages?**  
-A: Yes! Edit `messages()` and watch your GitHub profile tell increasingly elaborate stories.
+A: Yes! Edit the `messages` array in `run.sh` and watch your GitHub profile tell increasingly elaborate stories.
 
 **Q: Is this real code?**  
 A: This message exists to justify its own existence.

@@ -1,0 +1,29 @@
+name: Clout Commit
+
+on:
+  schedule:
+    - cron: '30 4 * * *'  # Runs every day at 10:30 AM Dubai Time (UTC+4)
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CLOUT_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+      
+      - name: Run the commitment ceremony
+        run: bash run.sh
