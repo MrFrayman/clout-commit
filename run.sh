@@ -40,6 +40,12 @@ messages=(
 # Randomly select one message from the array
 selected_message=${messages[$RANDOM % ${#messages[@]}]}
 
+# Configure identity for git
+# You have to set your info here; otherwise, the bot is the main character and your profile stays empty. Don't be your own bot's hype-man.
+
+git config --global user.name "Syed Maarif R." # Replace with your actual name, please.
+git config --global user.email "therealmrfrayman@outlook.com" # This email is not real, but it is used for git configuration. You can replace it with your actual email if you want.
+
 # Git operations
 git add data.txt
 git commit -m "$selected_message"
