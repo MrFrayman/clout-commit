@@ -46,6 +46,12 @@ selected_message=${messages[$RANDOM % ${#messages[@]}]}
 git config --global user.name "Syed Maarif R." # Replace with your actual name, please.
 git config --global user.email "therealmrfrayman@outlook.com" # This email is not real, but it is used for git configuration. You can replace it with your actual email if you want.
 
+export GIT_AUTHOR_NAME="Syed Maarif R."
+export GIT_AUTHOR_EMAIL="therealmrfrayman@outlook.com"
+export GIT_COMMITTER_NAME="Syed Maarif R."
+export GIT_COMMITTER_EMAIL="therealmrfrayman@outlook.com"
+
+
 # Git operations
 git add data.txt
 git commit -m "$selected_message"
